@@ -1,0 +1,19 @@
+.app-main{
+    margin: 2rem 4rem;
+    display: grid;
+    place-items: center;
+    gap: 4rem;
+}
+
+.app-main div{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, .4);
+}
+
+.app-main img{
+    max-width: 500px;
+    height: auto;
+}

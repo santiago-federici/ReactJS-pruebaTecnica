@@ -1,0 +1,98 @@
+:root{    
+  --clr-text: hsl(204, 20%, 10%);
+  --clr-surface: hsl(0, 0%, 90%);
+  --clr-primary: hsl(206, 100%, 66.1%);
+  --clr-secondary: hsl(0, 0%, 12%);
+  --clr-surface: hsl(152, 99%, 58.8%);
+
+  /* Step -2: 12.50px → 10.00px */
+  --fs-100: clamp(0.63rem, calc(0.84rem + -0.27vw), 0.78rem);
+
+  /* Step -1: 15.00px → 14.14px */
+  --fs-200: clamp(0.88rem, calc(0.96rem + -0.09vw), 0.94rem);
+
+  /* Step 0: 18.00px → 20.00px */
+  --fs-300: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+
+  /* Step 1: 21.60px → 28.28px */
+  --fs-400: clamp(1.35rem, calc(1.20rem + 0.73vw), 1.77rem);
+
+  /* Step 2: 25.92px → 39.99px */
+  --fs-500: clamp(1.62rem, calc(1.31rem + 1.53vw), 2.50rem);
+
+  /* Step 3: 31.10px → 56.54px */
+  --fs-600: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
+
+  /* Step 4: 37.32px → 79.95px */
+  --fs-700: clamp(2.33rem, calc(1.41rem + 4.63vw), 5.00rem);
+
+  /* Step 5: 44.79px → 113.05px */
+  --fs-800: clamp(2.80rem, calc(1.32rem + 7.42vw), 7.07rem);
+}
+
+
+@media(prefers-color-scheme: dark){
+  :root{
+      --clr-heading: hsl(0, 0%, 100%);
+      --clr-text: hsl(204, 20%, 85%);
+      --clr-surface: hsl(0, 0%, 16.9%);
+      --clr-primary: hsl(323, 82%, 35%);
+      --clr-secondary: hsl(0, 0%, 98%);
+      --clr-accent: hsl(300, 100%, 63%);
+  }
+}
+
+html{
+    color-scheme: light dark;
+}
+
+body{
+  width: 100dvw;
+  height: 100dvh;
+  font-size: var(--fs-300);
+  font-family: sans-serif;
+  background: rgb(43, 43, 43);
+  color: var(--clr-text);
+}
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: var(--fs-600);
+  color: var(--clr-heading)
+}
+
+h2{
+  font-size: var(--fs-500);
+  color: var(--clr-heading)
+}
+
+h3{
+  font-size: var(--fs-400);
+  color: var(--clr-heading)
+}
+
+button{
+  border: none;
+  padding: .7rem 1.2rem;
+  border-radius: .5rem;
+  background: var(--clr-primary);
+  font-size: var(--fs-300);
+  font-weight: 700;
+}
+
+button:hover{
+  opacity: .7;
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
